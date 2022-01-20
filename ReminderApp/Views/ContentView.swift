@@ -13,10 +13,7 @@ struct ContentView: View {
     
     var body: some View {
         List(store.tasks) { task in
-            HStack {
-                Image(systemName: task.completed ? "checkmark.circle.fill" : "circle")
-                Text(task.description)
-            }
+            TaskCell(task: task)
         }
     }
 }
