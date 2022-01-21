@@ -94,7 +94,6 @@
 			children = (
 				D7AE00222799C4760009816A /* Task.swift */,
 				D7AE00242799C4C50009816A /* TaskPriority.swift */,
-				D7AE00262799C5260009816A /* TaskStore.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -102,6 +101,7 @@
 		D7AE00212799C3F20009816A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				D7AE00262799C5260009816A /* TaskStore.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
