@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class TaskStore: ObservableObject {
     // MARK: Stored properties
@@ -18,7 +19,12 @@ class TaskStore: ObservableObject {
     // MARK: Functions
     func deleteItems(at offsets: IndexSet) {
         tasks.remove(atOffsets: offsets)
+        
+    }
+    
+    func moveItem (from source: IndexSet, to destination: Int) {
+        tasks.move(fromOffsets: source, toOffset: destination)
     }
 }
 
-let testStore = TaskStore(tasks: testData)
+var testStore = TaskStore(tasks: testData)
