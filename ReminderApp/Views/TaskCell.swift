@@ -11,6 +11,8 @@ struct TaskCell: View {
     
     @ObservedObject var task: Task
     
+    @Binding var triggerListUpdate: Bool
+    
     var taskColor: Color {
         switch task.priority {
         case .high:
@@ -31,6 +33,10 @@ struct TaskCell: View {
                     
                     task.completed.toggle()
                     
+                    withAnimation {
+                        triggerListUpdate.toggle()
+                    }
+                    
                 }
             
             Text(task.description)
@@ -41,9 +47,9 @@ struct TaskCell: View {
 
 struct TaskCell_Previews: PreviewProvider {
     static var previews: some View {
-        TaskCell(task: testData[0])
-        TaskCell(task: testData[1])
-        TaskCell(task: testData[2])
+        TaskCell(task: testData[0], triggerListUpdate: .constant(true))
+        TaskCell(task: testData[1], triggerListUpdate: .constant(true))
+        TaskCell(task: testData[2], triggerListUpdate: .constant(true))
 
     }
 }
