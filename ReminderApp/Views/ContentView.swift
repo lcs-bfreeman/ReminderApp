@@ -15,12 +15,34 @@ struct ContentView: View {
     
     @State var showingCompletedTasks = true
     
+    @State private var slectedPriorityForVisibleTasks: VisibleTaskPriority = .all
+    
     @State var listShouldUpdate = false
     
     var body: some View {
         
         let _ = print("listShouldUpdate has been toggled. Current value is: \(listShouldUpdate)")
         
+        VStack {
+            
+            Text("Filter by...")
+                .font(Font.caption.smallCaps())
+                .foregroundColor(.secondary)
+            
+            Picker("Priority", selection: $slectedPriorityForVisibleTasks) {
+                Text(VisibleTaskPriority.all.rawValue)
+                    .tag(VisibleTaskPriority.all)
+                Text(VisibleTaskPriority.low.rawValue)
+                    .tag(VisibleTaskPriority.low)
+                Text(VisibleTaskPriority.high.rawValue)
+                    .tag(VisibleTaskPriority.high)
+                Text(VisibleTaskPriority.medium.rawValue)
+                    .tag(VisibleTaskPriority.medium)
+                
+            }
+            .pickerStyle(.segmented)
+            .padding(.horizontal)
+            
         List {
             ForEach(store.tasks) { task in
                 
@@ -64,6 +86,7 @@ struct ContentView: View {
             AddTask(store: store, showing: $showingAddTask)
         }
     }
+  }
 }
 
 struct ContentView_Previews: PreviewProvider {
