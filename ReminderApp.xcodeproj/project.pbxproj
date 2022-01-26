@@ -17,6 +17,7 @@
 		D7AE00292799CE4A0009816A /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AE00282799CE4A0009816A /* TaskCell.swift */; };
 		D7AE002B2799D25E0009816A /* AddTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AE002A2799D25E0009816A /* AddTask.swift */; };
 		D7AE002E27A0E3400009816A /* VisibleTaskPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AE002D27A0E3400009816A /* VisibleTaskPriority.swift */; };
+		D7AE003127A0EA3B0009816A /* SharedFunctionsAndConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AE003027A0EA3B0009816A /* SharedFunctionsAndConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		D7AE00282799CE4A0009816A /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 		D7AE002A2799D25E0009816A /* AddTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTask.swift; sourceTree = "<group>"; };
 		D7AE002D27A0E3400009816A /* VisibleTaskPriority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisibleTaskPriority.swift; sourceTree = "<group>"; };
+		D7AE003027A0EA3B0009816A /* SharedFunctionsAndConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedFunctionsAndConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				D7AE00112799C2C20009816A /* ReminderAppApp.swift */,
+				D7AE002F27A0E9E70009816A /* Helpers */,
 				D7AE00212799C3F20009816A /* ViewModel */,
 				D7AE00202799C3ED0009816A /* Model */,
 				D7AE001F2799C3E60009816A /* Views */,
@@ -107,6 +110,14 @@
 				D7AE00262799C5260009816A /* TaskStore.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D7AE002F27A0E9E70009816A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D7AE003027A0EA3B0009816A /* SharedFunctionsAndConstants.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7AE003127A0EA3B0009816A /* SharedFunctionsAndConstants.swift in Sources */,
 				D7AE00272799C5260009816A /* TaskStore.swift in Sources */,
 				D7AE00142799C2C20009816A /* ContentView.swift in Sources */,
 				D7AE00232799C4760009816A /* Task.swift in Sources */,
