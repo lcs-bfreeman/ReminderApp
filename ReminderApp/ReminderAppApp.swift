@@ -16,10 +16,25 @@ struct ReminderAppApp: App {
     
     var body: some Scene {
         WindowGroup {
+            TabView {
+            
             NavigationView {
             ContentView(store: store)
             }
-        }
+            .tabItem{
+                Image(systemName:  "square.and.pencil")
+                Text("Reminders")
+            }
+            
+            NavigationView {
+                Important(store: store)
+            }
+            .tabItem{
+                Image(systemName: "exclamationmark.triangle" )
+                Text("Important")
+            }
+            }
+            }
         .onChange(of: scenephase) { newPhase in
             
             if newPhase == .inactive {
@@ -35,7 +50,7 @@ struct ReminderAppApp: App {
                 store.persistTasks()
                 
             }
-            
-        }
+
     }
+}
 }

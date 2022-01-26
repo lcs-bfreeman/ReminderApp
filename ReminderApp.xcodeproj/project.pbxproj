@@ -18,6 +18,7 @@
 		D7AE002B2799D25E0009816A /* AddTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AE002A2799D25E0009816A /* AddTask.swift */; };
 		D7AE002E27A0E3400009816A /* VisibleTaskPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AE002D27A0E3400009816A /* VisibleTaskPriority.swift */; };
 		D7AE003127A0EA3B0009816A /* SharedFunctionsAndConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AE003027A0EA3B0009816A /* SharedFunctionsAndConstants.swift */; };
+		D7AE003527A0FAE60009816A /* Important.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AE003427A0FAE60009816A /* Important.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		D7AE002A2799D25E0009816A /* AddTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTask.swift; sourceTree = "<group>"; };
 		D7AE002D27A0E3400009816A /* VisibleTaskPriority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisibleTaskPriority.swift; sourceTree = "<group>"; };
 		D7AE003027A0EA3B0009816A /* SharedFunctionsAndConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedFunctionsAndConstants.swift; sourceTree = "<group>"; };
+		D7AE003427A0FAE60009816A /* Important.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Important.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				D7AE00132799C2C20009816A /* ContentView.swift */,
+				D7AE003427A0FAE60009816A /* Important.swift */,
 				D7AE00282799CE4A0009816A /* TaskCell.swift */,
 				D7AE002A2799D25E0009816A /* AddTask.swift */,
 			);
@@ -196,6 +199,7 @@
 				D7AE00232799C4760009816A /* Task.swift in Sources */,
 				D7AE00252799C4C50009816A /* TaskPriority.swift in Sources */,
 				D7AE00292799CE4A0009816A /* TaskCell.swift in Sources */,
+				D7AE003527A0FAE60009816A /* Important.swift in Sources */,
 				D7AE002B2799D25E0009816A /* AddTask.swift in Sources */,
 				D7AE00122799C2C20009816A /* ReminderAppApp.swift in Sources */,
 				D7AE002E27A0E3400009816A /* VisibleTaskPriority.swift in Sources */,
