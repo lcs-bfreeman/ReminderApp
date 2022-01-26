@@ -34,10 +34,11 @@ struct ContentView: View {
                     .tag(VisibleTaskPriority.all)
                 Text(VisibleTaskPriority.low.rawValue)
                     .tag(VisibleTaskPriority.low)
-                Text(VisibleTaskPriority.high.rawValue)
-                    .tag(VisibleTaskPriority.high)
                 Text(VisibleTaskPriority.medium.rawValue)
                     .tag(VisibleTaskPriority.medium)
+                Text(VisibleTaskPriority.high.rawValue)
+                    .tag(VisibleTaskPriority.high)
+
                 
             }
             .pickerStyle(.segmented)
@@ -47,14 +48,28 @@ struct ContentView: View {
             ForEach(store.tasks) { task in
                 
                 if showingCompletedTasks {
-                
-                    TaskCell(task: task, triggerListUpdate: .constant(true))
+
+                    if slectedPriorityForVisibleTasks == .all {
+                        TaskCell(task: task, triggerListUpdate: .constant(true))
+                    } else {
+                        
+                        if task.priority.rawValue == slectedPriorityForVisibleTasks.rawValue {
+                            TaskCell(task: task, triggerListUpdate: .constant(true))
+                        }
+                        
+                    }
                     
                 } else {
                     
                     
                     if task.completed == false {
-                        TaskCell(task: task, triggerListUpdate: $listShouldUpdate)
+                        
+                        if slectedPriorityForVisibleTasks == .all{
+                            
+                            TaskCell(task: task, triggerListUpdate: $listShouldUpdate)
+
+                        }
+                        
                     }
                     
                 }
